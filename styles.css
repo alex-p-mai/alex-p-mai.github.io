@@ -16,11 +16,18 @@ h2 {
 p {
   font-size: 1.5rem;
 }
+img {
+  height: auto;
+}
 
 header,
 section.full {
   min-height: 80vh;
   /* background-color: #d3d3d3; */
+}
+
+.full--alternate {
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 49px, rgba(225,225,225, 0.7) 50px);
 }
 
 .flex-column {
@@ -54,9 +61,42 @@ section.full {
   width: 100%;
 }
 
+.about__outercontainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .about__innercontainer {
   margin-top: 32px;
   margin-bottom: 32px;
+  background-color: white;
+}
+
+.projects__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projects__card {
+  margin-bottom: 16px;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.projects__descriptioncontainer {
+  padding-left: 16px;
+  padding-right: 16px;
+  flex-basis: 120px;
+  flex-shrink: 0;
+}
+
+.projects__skills {
+  font-size: 1rem;
 }
 
 #header__photo {
@@ -104,6 +144,10 @@ section.full {
   }
   .header__textcontainer {
     height: 100%;
+  }
+  .projects__card {
+    max-width: 47%;
+    justify-content: space-between;
   }
   #header__photo {
     position: initial;
