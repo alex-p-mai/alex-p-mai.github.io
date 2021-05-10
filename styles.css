@@ -15,6 +15,7 @@ h2 {
 }
 p {
   font-size: 1.5rem;
+  color: #333;
 }
 img {
   height: auto;
@@ -23,11 +24,15 @@ img {
 header,
 section.full {
   min-height: 80vh;
-  /* background-color: #d3d3d3; */
 }
 
-.full--alternate {
+section.full--alternate {
   background-image: repeating-linear-gradient(45deg, transparent, transparent 49px, rgba(225,225,225, 0.7) 50px);
+}
+
+section.full--dark {
+  background-color: #191919;
+  color: white;
 }
 
 .flex-column {
@@ -97,6 +102,39 @@ section.full {
 
 .projects__skills {
   font-size: 1rem;
+}
+
+.footer__section {
+  margin-top: 80px;
+}
+.footer__container {
+  padding: 64px 0;
+}
+.footer__title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer_description{
+  color: #ffffff;
+  margin: 40px 0;
+}
+.footer__cta {
+  background-color:#191919;
+  font-size: 1.5rem;
+	border-radius:32px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding:16px 31px;
+	text-decoration: none;
+	text-shadow:0px 1px 0px #171717;
+}
+.footer__cta:hover {
+  background-color: #ffffff;
+  color: #191919;
+  transition-duration: 1.5s;
 }
 
 #header__photo {
