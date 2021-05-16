@@ -1,6 +1,10 @@
 /* Base */
 html {
   font-size: 16px;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 body {
   margin: 0;
@@ -51,15 +55,18 @@ section.full--dark {
   height: 100%;
   position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .header__textcontainer {
-  height: 80%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 16px;
+  padding: 16px;
 }
 
 .header__textgreeting {
@@ -109,6 +116,12 @@ section.full--dark {
 }
 .footer__container {
   padding: 64px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer__connect {
+  flex-grow: 1;
 }
 .footer__title {
   font-size: 3rem;
@@ -118,6 +131,16 @@ section.full--dark {
 .footer_description{
   color: #ffffff;
   margin: 40px 0;
+}
+.logo__container {
+  margin-top: 24px;
+  align-self: center;
+}
+.logo__link {
+  text-decoration: none;
+}
+.logo__linkedin {
+  color: #ffffff;
 }
 .footer__cta {
   background-color:#191919;
@@ -138,9 +161,6 @@ section.full--dark {
 }
 
 #header__photo {
-  position: absolute;
-  bottom: 0;
-  left: -50px;
   max-width: 210px;
 }
 
@@ -172,32 +192,23 @@ section.full--dark {
 @media screen and (min-width: 1024px) {
   .header {
     flex-wrap: nowrap;
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
   .header__imagecontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 24px;
+    margin-top: 0.67em;
   }
   .header__textcontainer {
     height: 100%;
+    margin-left: 24px;
   }
   .projects__card {
     max-width: 47%;
     justify-content: space-between;
   }
-  #header__photo {
-    position: initial;
-    max-width: 400px;
-    z-index: -1;
-  }
 }
 
 @media screen and (min-width: 1440px) {
   #header__photo {
-    top: -16px;
     max-width: 480px;
-    left: -160px;
   }
 }
