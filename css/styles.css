@@ -101,6 +101,12 @@ section.full--dark {
   overflow: hidden;
 }
 
+.projects__image {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+}
+
 .projects__descriptioncontainer {
   padding-left: 16px;
   padding-right: 16px;
@@ -203,8 +209,7 @@ section.full--dark {
     margin-left: 24px;
   }
   .projects__card {
-    max-width: 47%;
-    justify-content: space-between;
+    flex: 0 0 47%;
   }
 }
 
